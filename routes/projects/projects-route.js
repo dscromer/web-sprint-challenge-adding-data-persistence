@@ -134,7 +134,7 @@ function validBodyForTasks() {
 			return res.status(400).json({
 				msg: 'missing content',
 			});
-		} else if (!req.body.description || !req.body.taskComplete) {
+		} else if (!req.body.description || !req.body.project_id) {
 			return res.status(400).json({
 				msg: 'missing required field: description, project_id',
 			});
